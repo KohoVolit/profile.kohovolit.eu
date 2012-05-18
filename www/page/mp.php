@@ -28,21 +28,41 @@
   //BASIC INFORMATION - TO DISPLAY
   if (count($data) > 1) {
     //list
-    foreach($data as $row) {
-      $output[] = array(
-        'row' => array(
-          'value' => "{$row['mp_last_name']} {$row['mp_first_name']}" . 
-          (($row['mp_middle_names'] != '') ? ', ' . $row['mp_middle_names']:'') . 
-          (($row['mp_pre_title'] != '') ? ', ' . $row['mp_pre_title']:'') . 
-          (($row['mp_post_title'] != '') ? ', ' . $row['mp_post_title']:'') . (($row['mp_disambiguation'] != '') ? ' ('.$row['mp_disambiguation'].')':''),
-          'link' => l('mp',$row['mp_id'],'','id',false),
-        ),
-      );
-      $sort0[] = $row['mp_first_name'];
-      $sort1[] = $row['mp_last_name'];
-    }
-    $output = _sort($output,$sort0,false);
-    $output = _sort($output,$sort1);
+    
+    if (isset($_GET['letter'])) {
+      $letter = htmlspecialchars($_GET['letter']);
+      foreach($data as $row) {
+		if (mb_substr($row['mp_last_name'],0,1) == $letter) {
+		  $output[] = array(
+		    'row' => array(
+		      'value' => "{$row['mp_last_name']} {$row['mp_first_name']}" . 
+		      (($row['mp_middle_names'] != '') ? ', ' . $row['mp_middle_names']:'') . 
+		      (($row['mp_pre_title'] != '') ? ', ' . $row['mp_pre_title']:'') . 
+		      (($row['mp_post_title'] != '') ? ', ' . $row['mp_post_title']:'') . (($row['mp_disambiguation'] != '') ? ' ('.$row['mp_disambiguation'].')':''),
+		      'link' => l('mp',$row['mp_id'],'','id',false),
+		    ),
+		  );
+		  $sort0[] = $row['mp_first_name'];
+		  $sort1[] = $row['mp_last_name'];
+		}
+	  }
+	  $output = _sort($output,$sort0,false);
+	  $output = _sort($output,$sort1);
+	} else {
+	  $output = array();
+	  foreach($data as $row) {
+	    if (!isset($output[mb_substr($row['mp_last_name'],0,1)])) {
+	      $output[mb_substr($row['mp_last_name'],0,1)] = array(
+	        'row' => array(
+		      'value' => mb_substr($row['mp_last_name'],0,1) . ' ...',
+		      'link' => l('mp',mb_substr($row['mp_last_name'],0,1),'','letter',false),
+		    ),
+		  );
+	      $sort[mb_substr($row['mp_last_name'],0,1)] = mb_substr($row['mp_last_name'],0,1);
+	    } 
+	  }
+	  $output = _sort($output,$sort);
+	}
   } else if (count($data) == 1) {
     //individual
     $output = array( array(
