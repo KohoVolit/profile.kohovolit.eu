@@ -24,11 +24,20 @@
 	</script>-->
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	
+	<!-- google analytics -->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		(function() {
+		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+    </script>
+	
 	<link rel="stylesheet" type="text/css" href="/css/votewiki.css" />
 	<!--<link rel="stylesheet" type="text/css" href="/css/jqm-icon-pack-1.1-original.css" />-->
 
 	{block name=head}{/block}
-	<script type="text/javascript">var google_analytics_key = "{$smarty.const.GOOGLE_ANALYTICS_KEY}"</script>
 
 </head>
 
@@ -84,8 +93,20 @@
 		{/literal}
 
 	</div><!-- /footer -->
-	
-		<script type="text/javascript" src="/js/google_analytics.js"></script>
+	<script type="text/javascript">
+	  	$('[data-role=page]').live('pageshow', function (event, ui) {
+			try {
+				_gaq.push(['_setAccount', '{$smarty.const.GOOGLE_ANALYTICS_KEY}']);
+				hash = location.hash;
+				if (hash) {
+				    _gaq.push(['_trackPageview', hash.substr(1)]);
+				} else {
+				    _gaq.push(['_trackPageview']);
+				}
+			} catch(err) {
+			}
+		});
+</script>
   </div><!-- /page -->
 </body>
 </html>

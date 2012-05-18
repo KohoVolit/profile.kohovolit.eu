@@ -80,8 +80,8 @@ function attribute($smarty,$entity,$idef,$data) {
 			);
 			if (isset($ad['parl'])) $attribute[$ad['name']]['parliament'] = l('parliament',$ad['parl'],$parls[$ad['parl']],'code');
 			if (($ad['name'] == 'image') or ($ad['name'] == 'logo')) {
-			  $attribute['image']['format'] = 'image';
-			  $attribute['image']['image_url'] = API_FILES_URL . '/' . $ad['parl'] . "/images/{$entity}/" . $ad['value'];
+			  $attribute[$ad['name']]['format'] = 'image';
+			  $attribute[$ad['name']]['image_url'] = API_FILES_URL . '/' . $ad['parl'] . "/images/{$entity}/" . $ad['value'];
 			}
 		  }
 		}
