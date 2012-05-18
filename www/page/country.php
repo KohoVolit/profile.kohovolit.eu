@@ -31,7 +31,7 @@
       $output[] = array(
         'row' => array(
           'value' => $row['country_name'],
-          'link' => l('country',$row['country_code'],$row['country_name'],'id',false),
+          'link' => l('country',$row['country_code'],$row['country_name'],'code',false),
           'details' => array(
             $row['country_short_name'],
             $row['country_description'], 
