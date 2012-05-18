@@ -64,8 +64,10 @@
 	  <input data-theme="e" data-type="text" name="name" id="basic" value="{$api_call_attribute}" readonly='readonly' />   
   {/if}
   
-  <!-- {$entity} specific -->
-  {include file="$entity.tpl"}
+  {if $individual}
+    <!-- {$entity} specific -->
+    {include file="$entity.tpl"}
+  {/if}
 
 
 {/block}

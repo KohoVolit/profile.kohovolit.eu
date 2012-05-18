@@ -1,0 +1,161 @@
+# Czech translation of profile.KohoVolit.eu
+# Copyright (C) 2011 KohoVolit.eu
+# This file is distributed under the same license as the KohoVolit.eu package.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: profile.KohoVolit.eu 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-18 13:22+0100\n"
+"PO-Revision-Date: 2012-05-18 13:25+0100\n"
+"Language-Team: Czech <info@kohovolit.eu>\n"
+"Language: czech\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1)?(0):(((n>=2)&&(n<=4))?(1):2));\n"
+
+msgid "About"
+msgstr "O projektu"
+
+msgid "Settings"
+msgstr "Nastavení"
+
+msgid "search"
+msgstr "vyhledávání"
+
+msgid "Home"
+msgstr "Domů"
+
+msgid "settings"
+msgstr "nastavení"
+
+msgid "Change language"
+msgstr "Změnit jazyk"
+
+msgid "Name"
+msgstr "Jméno"
+
+msgid "Short name"
+msgstr "Zkrácené jméno"
+
+msgid "Description"
+msgstr "Popis"
+
+msgid "Since"
+msgstr "Od"
+
+msgid "Until"
+msgstr "Do"
+
+msgid "Parliament"
+msgstr "Parlament/zastupitelstvo"
+
+msgid "constituencies"
+msgstr "Colební obvody"
+
+msgid "Countries"
+msgstr "Země"
+
+msgid "Profiles"
+msgstr "Profily"
+
+msgid "Term"
+msgstr "Volební období"
+
+msgid "Group kind"
+msgstr "Typ skupiny"
+
+msgid "Groups"
+msgstr "Skupiny"
+
+msgid "Last name"
+msgstr "Příjmení"
+
+msgid "First name"
+msgstr "Křestní jméno"
+
+msgid "Middle names"
+msgstr "Prostřední jména"
+
+msgid "Disambiguation"
+msgstr "Rozlišení"
+
+msgid "Male"
+msgstr "Muž"
+
+msgid "Female"
+msgstr "Žena"
+
+msgid "Sex"
+msgstr "Pohlaví"
+
+msgid "Title (pre)"
+msgstr "Titul (před jménem)"
+
+msgid "Title (post)"
+msgstr "Titul (za jménem)"
+
+msgid "Born on"
+msgstr "Narozen/a"
+
+msgid "Died on"
+msgstr "Zemřel/a"
+
+msgid "MPs"
+msgstr "Poslanci/zastupitelé"
+
+msgid "Parliament kind"
+msgstr "Typ parlamentu/zastupitelstva"
+
+msgid "Country"
+msgstr "Země"
+
+msgid "Parliaments"
+msgstr "Parlamenty/zastupitelstva"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Terms"
+msgstr "Volební období"
+
+msgid "about"
+msgstr "O projektu"
+
+msgid "profile.KohoVolit.eu is a showcase for KohoVolit.eu's Parliamentary API"
+msgstr "profile.KohoVolit.eu ukazuje možnosti Parlamentního API KohoVolit.eu"
+
+msgid "API Documentation"
+msgstr "Dokumentace k API"
+
+msgid "Basic information"
+msgstr "Základní informace"
+
+msgid "Further information"
+msgstr "Další informace"
+
+msgid "Select"
+msgstr "Vyberte"
+
+msgid "Constituencies"
+msgstr "Volební obvody"
+
+msgid "Parliamentary terms"
+msgstr "Volební období"
+
+msgid "API"
+msgstr "API"
+
+msgid "Documentation"
+msgstr "Dokumentace"
+
+msgid "Members"
+msgstr "Členové"
+
+msgid "MSGID_HTML_HEAD_DESCRIPTION"
+msgstr "----"
+
+msgid "Save"
+msgstr "Uložit"

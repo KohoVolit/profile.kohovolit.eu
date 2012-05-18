@@ -88,6 +88,11 @@
   $api_call = API_DOMAIN . "/data/Group" . (isset($_GET[$idef]) ? "?{$idef}={$_GET[$idef]}" : '');
   $smarty->assign('api_call',$api_call);
   
+  
+  //is it individual?
+  if(count($data) != 1) $individual = false;
+  else {
+    $individual = true;
    
   //ATTRIBUTES
   $smarty = attribute($smarty,$entity,$idef,$data);
@@ -178,6 +183,8 @@
   $smarty->assign('data_specific_api_call',API_DOMAIN . '/data/MpInGroupInfo?'.$entity.'_'.$idef . '=' . $_GET[$idef]);
   
   
+  }
+  $smarty->assign('individual',$individual);  
   
   //final display
   $smarty->display('entity.tpl');

@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-18 04:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: www/page/constituency.php:57 www/page/country.php:47 www/page/group.php:68
+#: www/page/parliament.php:62 www/page/term.php:61
+msgid "Name"
+msgstr ""
+
+#: www/page/constituency.php:58 www/page/country.php:48 www/page/group.php:69
+#: www/page/parliament.php:63 www/page/term.php:62
+msgid "Short name"
+msgstr ""
+
+#: www/page/constituency.php:59 www/page/country.php:49
+#: www/page/parliament.php:64 www/page/term.php:63
+msgid "Description"
+msgstr ""
+
+#: www/page/constituency.php:60
+msgid "Since"
+msgstr ""
+
+#: www/page/constituency.php:61
+msgid "Until"
+msgstr ""
+
+#: www/page/constituency.php:62 www/page/group.php:70
+msgid "Parliament"
+msgstr ""
+
+#: www/page/constituency.php:74
+msgid "constituencies"
+msgstr ""
+
+#: www/page/country.php:61
+msgid "Countries"
+msgstr ""
+
+#: www/page/front_page.php:5
+msgid "Profiles"
+msgstr ""
+
+#: www/page/group.php:71
+msgid "Term"
+msgstr ""
+
+#: www/page/group.php:72
+msgid "Group kind"
+msgstr ""
+
+#: www/page/group.php:85
+msgid "Groups"
+msgstr ""
+
+#: www/page/mp.php:49
+msgid "Last name"
+msgstr ""
+
+#: www/page/mp.php:50
+msgid "First name"
+msgstr ""
+
+#: www/page/mp.php:51
+msgid "Middle names"
+msgstr ""
+
+#: www/page/mp.php:52
+msgid "Disambiguation"
+msgstr ""
+
+#: www/page/mp.php:53
+msgid "Male"
+msgstr ""
+
+#: www/page/mp.php:53
+msgid "Female"
+msgstr ""
+
+#: www/page/mp.php:53
+msgid "Sex"
+msgstr ""
+
+#: www/page/mp.php:54
+msgid "Title (pre)"
+msgstr ""
+
+#: www/page/mp.php:55
+msgid "Title (post)"
+msgstr ""
+
+#: www/page/mp.php:56
+msgid "Born on"
+msgstr ""
+
+#: www/page/mp.php:57
+msgid "Died on"
+msgstr ""
+
+#: www/page/mp.php:69
+msgid "MPs"
+msgstr ""
+
+#: www/page/parliament.php:65 www/page/term.php:65
+msgid "Parliament kind"
+msgstr ""
+
+#: www/page/parliament.php:66 www/page/term.php:66
+msgid "Country"
+msgstr ""
+
+#: www/page/parliament.php:79
+msgid "Parliaments"
+msgstr ""
+
+#: www/page/term.php:64
+msgid "Date"
+msgstr ""
+
+#: www/page/term.php:79
+msgid "Terms"
+msgstr ""

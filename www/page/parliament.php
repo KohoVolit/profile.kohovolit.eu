@@ -82,7 +82,12 @@
   $api_call = API_DOMAIN . "/data/Parliament" . (isset($_GET[$idef]) ? "?{$idef}={$_GET[$idef]}" : '');
   $smarty->assign('api_call',$api_call);
   
-   
+  //is it individual?
+  if(count($data) != 1) $individual = false;
+  else {
+    $individual = true;      
+
+
   //ATTRIBUTES
   $smarty = attribute($smarty,$entity,$idef,$data);
 
@@ -136,7 +141,8 @@
   $smarty->assign('data_specific',$output_specific);
   $smarty->assign('data_specific_api_call',API_DOMAIN . '/data/Term?parliament_kind_code=' . $data_specific[0]['parliament_kind_code'] . '&country_code='.$data[0]['country_code']);
   
-  
+  }
+  $smarty->assign('individual',$individual);  
   
   //final display
   $smarty->display('entity.tpl');

@@ -29,9 +29,6 @@
 
 	{block name=head}{/block}
 	<script type="text/javascript">var google_analytics_key = "{$smarty.const.GOOGLE_ANALYTICS_KEY}"</script>
-	<script type="text/javascript">$(document).live( 'pageinit',function(event){
-        {include file="social.js"}
-});</script>
 
 </head>
 
@@ -41,16 +38,52 @@
 	<div data-role="header" data-theme="e" {block name=headerDataTheme}{/block}>
 		<h1>{block name=h1}{/block}</h1>
 		<a href="/" data-role="button" data-icon="home" data-iconpos="notext">{t}Home{/t}</a>
-		<a href="/search" data-role="button" data-icon="search" data-iconpos="notext">{t}Search{/t}</a>
+		<a href="http://community.kohovolit.eu/doku.php/api" data-role="button">{t}API{/t}</a>
 	</div><!-- /header -->
 	<div data-role="content">
 	  
 		{block name=content}{/block}
 	</div><!-- /content -->
 	<div data-role="footer" {block name=footerDataTheme}{/block} data-tap-toggle="false" data-iconpos="top">
-	  {block name=footer}{/block}
+	  <!--footer -->
+	  <a href="/about" data-icon="info" data-ajax="false">{t}About{/t}</a>
+	  <a href="/settings" data-icon="gear" data-ajax="false">{t}Settings{/t}</a>
+	  <!--social plugins-->
+		 {literal}
+			
+			<!--google+-->
+			<a>
+			<g:plusone annotation="inline" size="small" width="220"></g:plusone>
+			</a>
+			<!-- Place this render call where appropriate -->
+			<script type="text/javascript">
+				window.___gcfg = {lang: 'sk'};
+				(function() {
+					var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+					po.src = 'https://apis.google.com/js/plusone.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				})();
+			</script>
+			<!--twitter-->
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="KohoVolitEU">Tweet</a>
+
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			
+			
+			<!--facebook-->
+			<span id="fb-root"></span>
+			<script>(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = '//connect.facebook.net/sk_SK/all.js#xfbml=1';
+				fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-send="false" data-layout="button_count" data-width="130" data-show-faces="true"></div>
+		{/literal}
+
 	</div><!-- /footer -->
-	{block name=formEnd}{/block}
 	
 		<script type="text/javascript" src="/js/google_analytics.js"></script>
   </div><!-- /page -->

@@ -50,7 +50,7 @@
 		'first_name' => array('value' => $data[0]['mp_first_name'],'label' => _('First name')),
 		'middle_names' => array('value' => $data[0]['mp_middle_names'],'label' => _('Middle names')),
 		'disambiguation' => array('value' => $data[0]['mp_disambiguation'],'label' => _('Disambiguation')),
-		'sex' => array('value' => ($data[0]['mp_sex'] == 'm' ? _('Male') : ($data[0]['sex'] == 'f' ? _('Female') : '')), 'label' => _('Sex')),
+		'sex' => array('value' => ($data[0]['mp_sex'] == 'm' ? _('Male') : ($data[0]['mp_sex'] == 'f' ? _('Female') : '')), 'label' => _('Sex')),
 		'pre_title' => array('value' => $data[0]['mp_pre_title'],'label' => _('Title (pre)')),
 		'post_title' => array('value' => $data[0]['mp_post_title'],'label' => _('Title (post)')),
 		'born_on' => array('value' => format_date_infinity($data[0]['mp_born_on']),'label' => _('Born on')),
@@ -72,6 +72,10 @@
   $api_call = API_DOMAIN . "/data/Mp" . (isset($_GET[$idef]) ? "?{$idef}={$_GET[$idef]}" : '');
   $smarty->assign('api_call',$api_call);
   
+  //is it individual?
+  if(count($data) != 1) $individual = false;
+  else {
+    $individual = true;   
    
   //ATTRIBUTES
   $smarty = attribute($smarty,$entity,$idef,$data);
@@ -181,13 +185,12 @@
     foreach ($os0 as $key=>$os)
       $output_specific[$key0][$key] = _sort($output_specific[$key0][$key],$sort[$key0][$key],false);
 
-//print_r($output_specific_title); print_r($output_specific);die(); 
-
   $smarty->assign('data_specific_title',$output_specific_title);
   $smarty->assign('data_specific',$output_specific);
   $smarty->assign('data_specific_api_call',API_DOMAIN . '/data/MpInGroupInfo?'.$entity.'_'.$idef . '=' . $_GET[$idef]);
   
-
+  }
+  $smarty->assign('individual',$individual);
   
   //final display
   $smarty->display('entity.tpl');
