@@ -94,11 +94,11 @@
 
 	</div><!-- /footer -->
 	<script type="text/javascript">
-	  	$('[data-role=page]').live('pageshow', function (event, ui) {
+	  	$('[data-role=page]').on('pageshow', function (event, ui) {
 			try {
 				_gaq.push(['_setAccount', '{$smarty.const.GOOGLE_ANALYTICS_KEY}']);
 				hash = location.hash;
-				if (hash) {
+				if (hash && hash.length > 1) {
 				    _gaq.push(['_trackPageview', hash.substr(1)]);
 				} else {
 				    _gaq.push(['_trackPageview']);
