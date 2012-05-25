@@ -5,10 +5,13 @@
       <h3>{t}Received public messages{/t}</h3><p>{$data_wtt.received_public_messages}</p>
     </li>
     <li>
-      <h3>{t}Answered public messages{/t}</h3><p>{$data_wtt.sent_public_replies}</p>
+      <h3>{t}Answered public messages{/t}</h3><p>{$data_wtt.replied_public_messages}</p>
     </li>
     <li>
       <h3>{t}Received private messages{/t}</h3><p>{$data_wtt.received_private_messages}</p>
+    </li>
+    <li>
+      <h3>{t}Average (median) days to reply{/t}</h3><p>{$data_wtt.average_days_to_reply}</p>
     </li>
   </ul>
   
