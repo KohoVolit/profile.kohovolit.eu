@@ -160,9 +160,14 @@
        '_order' => array(array('parliament_name','ASC'),array('term_since','DESC')),
     )
   );
-
+  
   $data_specific = $api->read('EntityInfo',$input_specific);
   $data_specific = translate($data_specific);
+  
+  //write to them
+  $api_wtt = new ApiDirect('napistejim');  
+  $data_wtt = $api_wtt->readOne('MpStatistics',array('mp'=>$_GET[$idef]));
+  
 
   //MP SPECIFIC - TO DISPLAY
   foreach($data_specific as $row) {
@@ -204,7 +209,11 @@
   foreach ($output_specific as $key0=>$os0)
     foreach ($os0 as $key=>$os)
       $output_specific[$key0][$key] = _sort($output_specific[$key0][$key],$sort[$key0][$key],false);
-
+      
+  if (count($data_wtt) > 0) {
+    $smarty->assign('data_wtt',$data_wtt);
+    $smarty->assign('data_wtt_api_call',API_DOMAIN . '/napistejim/MpStatistics?mp=' . $_GET[$idef]);
+  }
   $smarty->assign('data_specific_title',$output_specific_title);
   $smarty->assign('data_specific',$output_specific);
   $smarty->assign('data_specific_api_call',API_DOMAIN . '/data/MpInGroupInfo?'.$entity.'_'.$idef . '=' . $_GET[$idef]);

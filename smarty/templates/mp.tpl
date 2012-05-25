@@ -1,4 +1,21 @@
 <!-- parliament specific -->
+{if isset($data_wtt)}
+  <ul data-role="listview" data-inset="true">
+    <li>
+      <h3>{t}Received public messages{/t}<h3><p>{$data_wtt.received_public_messages}</p>
+    </li>
+    <li>
+      <h3>{t}Answered public messages{/t}<h3><p>{$data_wtt.sent_public_messages}</p>
+    </li>
+    <li>
+      <h3>{t}Received private messages{/t}<h3><p>{$data_wtt.received_private_messages}</p>
+    </li>
+  </ul>
+  
+  <label for="wtt">API:</label>
+  <input data-theme="e" data-type="text" name="name" id="wtt" value="{$data_wtt_api_call}" readonly='readonly' />
+{/if}
+
 {if $data_specific|@count > 0}
   {foreach from=$data_specific_title key=key0 item=dst0}
   {foreach from=$dst0 key=key item=dst}
