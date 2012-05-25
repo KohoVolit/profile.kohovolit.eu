@@ -2,13 +2,13 @@
 {if isset($data_wtt)}
   <ul data-role="listview" data-inset="true">
     <li>
-      <h3>{t}Received public messages{/t}<h3><p>{$data_wtt.received_public_messages}</p>
+      <h3>{t}Received public messages{/t}</h3><p>{$data_wtt.received_public_messages}</p>
     </li>
     <li>
-      <h3>{t}Answered public messages{/t}<h3><p>{$data_wtt.sent_public_messages}</p>
+      <h3>{t}Answered public messages{/t}</h3><p>{$data_wtt.sent_public_replies}</p>
     </li>
     <li>
-      <h3>{t}Received private messages{/t}<h3><p>{$data_wtt.received_private_messages}</p>
+      <h3>{t}Received private messages{/t}</h3><p>{$data_wtt.received_private_messages}</p>
     </li>
   </ul>
   
